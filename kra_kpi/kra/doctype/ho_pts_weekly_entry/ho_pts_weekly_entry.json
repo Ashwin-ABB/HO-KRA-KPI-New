@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "creation": "2026-11-05 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "master_row",
+  "main_task",
+  "expected_outcome",
+  "time_line",
+  "data",
+  "w1",
+  "w2",
+  "w3",
+  "w4",
+  "w5"
+ ],
+ "fields": [
+  {
+   "fieldname": "master_row",
+   "fieldtype": "Data",
+   "label": "Master Row",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_task",
+   "fieldtype": "Small Text",
+   "label": "Main Task",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 4
+  },
+  {
+   "fieldname": "expected_outcome",
+   "fieldtype": "Small Text",
+   "label": "Expected Outcome",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_line",
+   "fieldtype": "Data",
+   "label": "Time Line",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Float",
+   "label": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "w1",
+   "fieldtype": "Select",
+   "label": "Week 1",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "w2",
+   "fieldtype": "Select",
+   "label": "Week 2",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "w3",
+   "fieldtype": "Select",
+   "label": "Week 3",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "w4",
+   "fieldtype": "Select",
+   "label": "Week 4",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "w5",
+   "fieldtype": "Select",
+   "label": "Week 5",
+   "options": "\nY\nN\nL\nH\nNA"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "HO PTS Weekly Entry",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}

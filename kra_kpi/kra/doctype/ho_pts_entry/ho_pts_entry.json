@@ -1,0 +1,296 @@
+{
+ "actions": [],
+ "creation": "2026-11-05 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "designation",
+  "cb_period",
+  "posting_date",
+  "month",
+  "year",
+  "days_in_month",
+  "sb_sheet",
+  "entry_sheet",
+  "sb_tables",
+  "daily_entries",
+  "weekly_entries",
+  "monthly_entries",
+  "sb_score",
+  "daily_weightage",
+  "daily_target",
+  "daily_achieved",
+  "daily_score",
+  "cb_weekly",
+  "weekly_weightage",
+  "weekly_target",
+  "weekly_achieved",
+  "weekly_score",
+  "cb_monthly",
+  "monthly_weightage",
+  "monthly_target",
+  "monthly_achieved",
+  "monthly_score",
+  "sb_total",
+  "total_weightage",
+  "total_score",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "fetch_from": "employee.employee_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "fetch_from": "employee.designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_period",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Date (any day of the month)",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "days_in_month",
+   "fieldtype": "Int",
+   "label": "Days in Month",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "sb_sheet",
+   "fieldtype": "Section Break",
+   "label": "Checklist"
+  },
+  {
+   "fieldname": "entry_sheet",
+   "fieldtype": "HTML",
+   "label": "Checklist"
+  },
+  {
+   "fieldname": "sb_tables",
+   "fieldtype": "Section Break",
+   "label": "Detailed tables (backup view)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "daily_entries",
+   "fieldtype": "Table",
+   "label": "Daily Entries",
+   "options": "HO PTS Daily Entry"
+  },
+  {
+   "fieldname": "weekly_entries",
+   "fieldtype": "Table",
+   "label": "Weekly Entries",
+   "options": "HO PTS Weekly Entry"
+  },
+  {
+   "fieldname": "monthly_entries",
+   "fieldtype": "Table",
+   "label": "Monthly Entries",
+   "options": "HO PTS Monthly Entry"
+  },
+  {
+   "fieldname": "sb_score",
+   "fieldtype": "Section Break",
+   "label": "Score Details",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "daily_weightage",
+   "fieldtype": "Float",
+   "label": "Daily Weightage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "daily_target",
+   "fieldtype": "Int",
+   "label": "Daily Target",
+   "read_only": 1
+  },
+  {
+   "fieldname": "daily_achieved",
+   "fieldtype": "Int",
+   "label": "Daily Achieved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "daily_score",
+   "fieldtype": "Int",
+   "label": "Daily Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_weekly",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "weekly_weightage",
+   "fieldtype": "Float",
+   "label": "Weekly Weightage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weekly_target",
+   "fieldtype": "Int",
+   "label": "Weekly Target",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weekly_achieved",
+   "fieldtype": "Int",
+   "label": "Weekly Achieved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weekly_score",
+   "fieldtype": "Int",
+   "label": "Weekly Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_monthly",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "monthly_weightage",
+   "fieldtype": "Float",
+   "label": "Monthly Weightage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "monthly_target",
+   "fieldtype": "Int",
+   "label": "Monthly Target",
+   "read_only": 1
+  },
+  {
+   "fieldname": "monthly_achieved",
+   "fieldtype": "Int",
+   "label": "Monthly Achieved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "monthly_score",
+   "fieldtype": "Int",
+   "label": "Monthly Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_total",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "fieldname": "total_weightage",
+   "fieldtype": "Float",
+   "label": "Total Weightage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_score",
+   "fieldtype": "Int",
+   "label": "Total Score",
+   "read_only": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "HO PTS Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "HR Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Employee",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "if_owner": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "HO-PTS-.YYYY.-.#####",
+ "title_field": "employee_name",
+ "search_fields": "employee_name,month",
+ "track_changes": 1
+}

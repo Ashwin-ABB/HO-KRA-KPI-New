@@ -1,0 +1,280 @@
+{
+ "actions": [],
+ "creation": "2026-11-05 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "master_row",
+  "main_task",
+  "expected_outcome",
+  "time_line",
+  "data",
+  "d1",
+  "d2",
+  "d3",
+  "d4",
+  "d5",
+  "d6",
+  "d7",
+  "d8",
+  "d9",
+  "d10",
+  "d11",
+  "d12",
+  "d13",
+  "d14",
+  "d15",
+  "d16",
+  "d17",
+  "d18",
+  "d19",
+  "d20",
+  "d21",
+  "d22",
+  "d23",
+  "d24",
+  "d25",
+  "d26",
+  "d27",
+  "d28",
+  "d29",
+  "d30",
+  "d31"
+ ],
+ "fields": [
+  {
+   "fieldname": "master_row",
+   "fieldtype": "Data",
+   "label": "Master Row",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_task",
+   "fieldtype": "Small Text",
+   "label": "Main Task",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 4
+  },
+  {
+   "fieldname": "expected_outcome",
+   "fieldtype": "Small Text",
+   "label": "Expected Outcome",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_line",
+   "fieldtype": "Data",
+   "label": "Time Line",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Float",
+   "label": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "d1",
+   "fieldtype": "Select",
+   "label": "Day 1",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d2",
+   "fieldtype": "Select",
+   "label": "Day 2",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d3",
+   "fieldtype": "Select",
+   "label": "Day 3",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d4",
+   "fieldtype": "Select",
+   "label": "Day 4",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d5",
+   "fieldtype": "Select",
+   "label": "Day 5",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d6",
+   "fieldtype": "Select",
+   "label": "Day 6",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d7",
+   "fieldtype": "Select",
+   "label": "Day 7",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d8",
+   "fieldtype": "Select",
+   "label": "Day 8",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d9",
+   "fieldtype": "Select",
+   "label": "Day 9",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d10",
+   "fieldtype": "Select",
+   "label": "Day 10",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d11",
+   "fieldtype": "Select",
+   "label": "Day 11",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d12",
+   "fieldtype": "Select",
+   "label": "Day 12",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d13",
+   "fieldtype": "Select",
+   "label": "Day 13",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d14",
+   "fieldtype": "Select",
+   "label": "Day 14",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d15",
+   "fieldtype": "Select",
+   "label": "Day 15",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d16",
+   "fieldtype": "Select",
+   "label": "Day 16",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d17",
+   "fieldtype": "Select",
+   "label": "Day 17",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d18",
+   "fieldtype": "Select",
+   "label": "Day 18",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d19",
+   "fieldtype": "Select",
+   "label": "Day 19",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d20",
+   "fieldtype": "Select",
+   "label": "Day 20",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d21",
+   "fieldtype": "Select",
+   "label": "Day 21",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d22",
+   "fieldtype": "Select",
+   "label": "Day 22",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d23",
+   "fieldtype": "Select",
+   "label": "Day 23",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d24",
+   "fieldtype": "Select",
+   "label": "Day 24",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d25",
+   "fieldtype": "Select",
+   "label": "Day 25",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d26",
+   "fieldtype": "Select",
+   "label": "Day 26",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d27",
+   "fieldtype": "Select",
+   "label": "Day 27",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d28",
+   "fieldtype": "Select",
+   "label": "Day 28",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d29",
+   "fieldtype": "Select",
+   "label": "Day 29",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d30",
+   "fieldtype": "Select",
+   "label": "Day 30",
+   "options": "\nY\nN\nL\nH\nNA"
+  },
+  {
+   "fieldname": "d31",
+   "fieldtype": "Select",
+   "label": "Day 31",
+   "options": "\nY\nN\nL\nH\nNA"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "HO PTS Daily Entry",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}
