@@ -1,0 +1,55 @@
+{% var COLOURS = {
+	Green: ["#bbf7d0", "#166534"],
+	Yellow: ["#fef08a", "#854d0e"],
+	Red: ["#fecaca", "#991b1b"],
+	Grey: ["#e5e7eb", "#374151"]
+}; %}
+{% var SCORE_KEYS = ["internal_feedback", "kpi_score", "pts_score", "total_score"]; %}
+{% var any_pending = false; for (var p = 0; p < data.length; p++) { if (data[p].pending) { any_pending = true; } } %}
+{% var legend = data.length ? (data[0].legend || []) : []; %}
+<style>
+	.ho-tl * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+	.ho-tl-title { background: #1f3a5f; color: #fff; text-align: center; font-size: 16px; font-weight: 700; padding: 8px; }
+	.ho-tl table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px; }
+	.ho-tl th, .ho-tl td { border: 1px solid #444; padding: 6px 8px; }
+	.ho-tl th { background: #e5e7eb; text-align: center; }
+	.ho-tl-chip { display: inline-block; padding: 2px 8px; margin-right: 8px; border: 1px solid #888; font-weight: 600; font-size: 11px; }
+</style>
+<div class="ho-tl">
+	<div class="ho-tl-title">HO TRAFFIC LIGHT - {%= (filters.month || "").toUpperCase() %} {%= filters.year %}</div>
+	<table>
+		<thead>
+			<tr>
+				<th style="width: 5%;">S.NO.</th>
+				<th>EMPLOYEE NAME</th>
+				<th>INTERNAL FEEDBACK (20)</th>
+				<th>KPI SCORE (65)</th>
+				<th>PTS (15)</th>
+				<th>TOTAL SCORE (100)</th>
+				{% if (any_pending) { %}<th>PENDING</th>{% } %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for (var i = 0, l = data.length; i < l; i++) { var row = data[i]; %}
+			<tr>
+				<td style="text-align: center;">{%= i + 1 %}</td>
+				<td style="font-weight: 600;">{%= row.employee %} - {%= row.employee_name %}</td>
+				{% for (var k = 0; k < SCORE_KEYS.length; k++) {
+					var key = SCORE_KEYS[k];
+					var value = row[key];
+					var c = COLOURS[row[key + "_rating"]] || ["", ""]; %}
+				<td style="text-align: center; font-weight: 600; background: {%= c[0] %}; color: {%= c[1] %};">{%= (value === null || value === undefined) ? "" : Math.round(value * 10) / 10 %}</td>
+				{% } %}
+				{% if (any_pending) { %}<td>{%= row.pending || "" %}</td>{% } %}
+			</tr>
+			{% } %}
+		</tbody>
+	</table>
+	{% if (legend.length) { %}
+	<div style="margin-top: 10px; font-size: 11px;"><b>Total colours:</b>
+		{% for (var m = 0; m < legend.length; m++) { var lc = COLOURS[legend[m].label]; %}
+		<span class="ho-tl-chip" style="background: {%= lc[0] %}; color: {%= lc[1] %};">{%= legend[m].label %}: {%= legend[m].range %}</span>
+		{% } %}
+	</div>
+	{% } %}
+</div>

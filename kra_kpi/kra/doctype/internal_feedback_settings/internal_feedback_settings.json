@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "creation": "2026-11-03 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "help",
+  "branches"
+ ],
+ "fields": [
+  {
+   "fieldname": "help",
+   "fieldtype": "Small Text",
+   "label": "How it works",
+   "read_only": 1,
+   "default": "Internal Feedback sheets list the active employees of these branches. If the list is empty, Head Office is used. A branch chosen on the sheet itself overrides this list."
+  },
+  {
+   "fieldname": "branches",
+   "fieldtype": "Table",
+   "label": "Branches",
+   "options": "Internal Feedback Branch"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-03 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "Internal Feedback Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "issingle": 1,
+ "track_changes": 1
+}
