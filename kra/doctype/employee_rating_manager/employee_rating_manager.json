@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "creation": "2026-11-14 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rating_month",
+  "rating_month_name",
+  "rating_year",
+  "sb_people",
+  "manager",
+  "manager_full_name",
+  "cb_people",
+  "employee",
+  "employee_full_name",
+  "sb_rating",
+  "overall_rating",
+  "approachability",
+  "ethics_accountability",
+  "continue_same_team",
+  "work_allocation",
+  "sb_score",
+  "rating_value",
+  "score",
+  "cb_score",
+  "questions_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "rating_month",
+   "fieldtype": "Date",
+   "label": "Rating Month (Select last date of the Rating month)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rating_month_name",
+   "fieldtype": "Data",
+   "label": "Month",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rating_year",
+   "fieldtype": "Int",
+   "label": "Year",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_people",
+   "fieldtype": "Section Break",
+   "label": "Manager and Employee"
+  },
+  {
+   "fieldname": "manager",
+   "fieldtype": "Link",
+   "label": "Manager Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "manager_full_name",
+   "fieldtype": "Data",
+   "label": "Manager Full Name",
+   "fetch_from": "manager.employee_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_people",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_full_name",
+   "fieldtype": "Data",
+   "label": "Employee Full Name",
+   "fetch_from": "employee.employee_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_rating",
+   "fieldtype": "Section Break",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Select",
+   "label": "Overall Rating about your Manager",
+   "options": "\n1 - Unacceptable\n2 - Poor Performance\n3 - Weak\n4 - Not Satisfied\n5 - Average\n6 - Above Average\n7 - Good\n8 - Very Good\n9 - Excellent\n10 - Outstanding",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "approachability",
+   "fieldtype": "Select",
+   "label": "1. Approachability",
+   "options": "\n1\n2\n3\n4\n5",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ethics_accountability",
+   "fieldtype": "Select",
+   "label": "2. Ethical & Accountability",
+   "options": "\n1\n2\n3\n4\n5",
+   "reqd": 1
+  },
+  {
+   "fieldname": "continue_same_team",
+   "fieldtype": "Select",
+   "label": "3. Would you like to continue in the same team",
+   "options": "\n1\n2\n3\n4\n5",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_allocation",
+   "fieldtype": "Select",
+   "label": "4. Allocation of work evenly spread to Team Members",
+   "options": "\n1\n2\n3\n4\n5",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_score",
+   "fieldtype": "Section Break",
+   "label": "Score"
+  },
+  {
+   "fieldname": "rating_value",
+   "fieldtype": "Int",
+   "label": "Rating No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "label": "Score",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "From Rating Score Master"
+  },
+  {
+   "fieldname": "cb_score",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "questions_total",
+   "fieldtype": "Int",
+   "label": "Questions Total (out of 20)",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "Employee Rating Manager",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "HR Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Employee",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "if_owner": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "ERM-.YYYY.-.#####",
+ "title_field": "manager_full_name",
+ "search_fields": "manager_full_name,rating_month_name",
+ "track_changes": 1
+}

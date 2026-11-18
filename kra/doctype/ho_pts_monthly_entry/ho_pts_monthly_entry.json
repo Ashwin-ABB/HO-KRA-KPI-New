@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "creation": "2026-11-05 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "master_row",
+  "main_task",
+  "expected_outcome",
+  "time_line",
+  "data",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "master_row",
+   "fieldtype": "Data",
+   "label": "Master Row",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_task",
+   "fieldtype": "Small Text",
+   "label": "Main Task",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 4
+  },
+  {
+   "fieldname": "expected_outcome",
+   "fieldtype": "Small Text",
+   "label": "Expected Outcome",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_line",
+   "fieldtype": "Data",
+   "label": "Time Line",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Float",
+   "label": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nY\nN\nL\nH\nNA",
+   "in_list_view": 1,
+   "columns": 2
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "HO PTS Monthly Entry",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}

@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2026-11-14 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "feedback_rating",
+  "rating_no",
+  "score"
+ ],
+ "fields": [
+  {
+   "fieldname": "feedback_rating",
+   "fieldtype": "Data",
+   "label": "Feedback Rating",
+   "reqd": 1,
+   "unique": 1,
+   "set_only_once": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rating_no",
+   "fieldtype": "Int",
+   "label": "Rating No.",
+   "reqd": 1,
+   "set_only_once": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "label": "Score",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Points this rating is worth. Change it here any time."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "Rating Score Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "rating_no",
+ "sort_order": "ASC",
+ "states": [],
+ "autoname": "field:feedback_rating",
+ "track_changes": 1
+}

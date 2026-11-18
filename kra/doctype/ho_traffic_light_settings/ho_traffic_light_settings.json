@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "creation": "2026-11-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "help",
+  "rules"
+ ],
+ "fields": [
+  {
+   "fieldname": "help",
+   "fieldtype": "Small Text",
+   "label": "How it works",
+   "read_only": 1,
+   "default": "Colours in the HO Traffic Light report. A score at or above Green from is Green; at or above Yellow from is Yellow; at or above Red from is Red; lower is Grey. Internal Feedback is out of 20, KPI Score out of 65, PTS out of 15 and Total Score out of 100."
+  },
+  {
+   "fieldname": "rules",
+   "fieldtype": "Table",
+   "label": "Colour limits",
+   "options": "HO Traffic Light Rule",
+   "cannot_add_rows": 1,
+   "cannot_delete_rows": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "HO Traffic Light Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "issingle": 1,
+ "track_changes": 1
+}

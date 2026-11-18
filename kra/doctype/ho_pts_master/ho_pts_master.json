@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "creation": "2026-11-05 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "designation",
+  "is_active",
+  "sb_weight",
+  "daily_weightage",
+  "weekly_weightage",
+  "monthly_weightage",
+  "total_weightage",
+  "sb_daily",
+  "daily_tasks",
+  "sb_weekly",
+  "weekly_tasks",
+  "sb_monthly",
+  "monthly_tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "fetch_from": "employee.employee_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "fetch_from": "employee.designation",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": "1"
+  },
+  {
+   "fieldname": "sb_weight",
+   "fieldtype": "Section Break",
+   "label": "Weightage"
+  },
+  {
+   "fieldname": "daily_weightage",
+   "fieldtype": "Float",
+   "label": "Daily Task Weightage",
+   "default": "5",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weekly_weightage",
+   "fieldtype": "Float",
+   "label": "Weekly Task Weightage",
+   "default": "5",
+   "reqd": 1
+  },
+  {
+   "fieldname": "monthly_weightage",
+   "fieldtype": "Float",
+   "label": "Monthly Task Weightage",
+   "default": "5",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_weightage",
+   "fieldtype": "Float",
+   "label": "Total Weightage",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "sb_daily",
+   "fieldtype": "Section Break",
+   "label": "Daily Checklist"
+  },
+  {
+   "fieldname": "daily_tasks",
+   "fieldtype": "Table",
+   "label": "Daily Tasks",
+   "options": "HO PTS Task"
+  },
+  {
+   "fieldname": "sb_weekly",
+   "fieldtype": "Section Break",
+   "label": "Weekly Checklist"
+  },
+  {
+   "fieldname": "weekly_tasks",
+   "fieldtype": "Table",
+   "label": "Weekly Tasks",
+   "options": "HO PTS Task"
+  },
+  {
+   "fieldname": "sb_monthly",
+   "fieldtype": "Section Break",
+   "label": "Monthly Checklist"
+  },
+  {
+   "fieldname": "monthly_tasks",
+   "fieldtype": "Table",
+   "label": "Monthly Tasks",
+   "options": "HO PTS Task"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KRA",
+ "name": "HO PTS Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "HR Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "field:employee",
+ "title_field": "employee_name",
+ "search_fields": "employee_name,designation",
+ "track_changes": 1
+}
